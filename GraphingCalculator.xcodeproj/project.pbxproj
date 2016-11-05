@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		F6627E941DCE634400168CD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6627E931DCE634400168CD6 /* AppDelegate.swift */; };
-		F6627E961DCE634400168CD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6627E951DCE634400168CD6 /* ViewController.swift */; };
 		F6627E991DCE634400168CD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6627E971DCE634400168CD6 /* Main.storyboard */; };
 		F6627E9B1DCE634400168CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6627E9A1DCE634400168CD6 /* Assets.xcassets */; };
 		F6627E9E1DCE634400168CD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6627E9C1DCE634400168CD6 /* LaunchScreen.storyboard */; };
+		F6627EA61DCE651900168CD6 /* GraphingCalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6627EA51DCE651900168CD6 /* GraphingCalculatorVC.swift */; };
+		F6627EA91DCE65F800168CD6 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6627EA81DCE65F800168CD6 /* GraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F6627E901DCE634400168CD6 /* GraphingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6627E931DCE634400168CD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F6627E951DCE634400168CD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F6627E981DCE634400168CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F6627E9A1DCE634400168CD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F6627E9D1DCE634400168CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F6627E9F1DCE634400168CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6627EA51DCE651900168CD6 /* GraphingCalculatorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphingCalculatorVC.swift; sourceTree = "<group>"; };
+		F6627EA81DCE65F800168CD6 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,23 @@
 		F6627E921DCE634400168CD6 /* GraphingCalculator */ = {
 			isa = PBXGroup;
 			children = (
-				F6627E931DCE634400168CD6 /* AppDelegate.swift */,
-				F6627E951DCE634400168CD6 /* ViewController.swift */,
 				F6627E971DCE634400168CD6 /* Main.storyboard */,
+				F6627EA81DCE65F800168CD6 /* GraphView.swift */,
+				F6627EA51DCE651900168CD6 /* GraphingCalculatorVC.swift */,
+				F6627EA71DCE653000168CD6 /* Supporting FIles */,
+			);
+			path = GraphingCalculator;
+			sourceTree = "<group>";
+		};
+		F6627EA71DCE653000168CD6 /* Supporting FIles */ = {
+			isa = PBXGroup;
+			children = (
+				F6627E931DCE634400168CD6 /* AppDelegate.swift */,
 				F6627E9A1DCE634400168CD6 /* Assets.xcassets */,
 				F6627E9C1DCE634400168CD6 /* LaunchScreen.storyboard */,
 				F6627E9F1DCE634400168CD6 /* Info.plist */,
 			);
-			path = GraphingCalculator;
+			name = "Supporting FIles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +148,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6627E961DCE634400168CD6 /* ViewController.swift in Sources */,
+				F6627EA61DCE651900168CD6 /* GraphingCalculatorVC.swift in Sources */,
 				F6627E941DCE634400168CD6 /* AppDelegate.swift in Sources */,
+				F6627EA91DCE65F800168CD6 /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
