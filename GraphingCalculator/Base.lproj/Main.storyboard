@@ -56,7 +56,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qcc-Qn-3bV">
                                                 <rect key="frame" x="0.0" y="141" width="300" height="141.5"/>
                                                 <subviews>
-                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4.5" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="FlS-Qo-0ew">
+                                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.01" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="FlS-Qo-0ew">
                                                         <rect key="frame" x="-2" y="0.0" width="304" height="142.5"/>
                                                         <connections>
                                                             <action selector="rangeValueChanged:" destination="bs3-Qr-bbx" eventType="valueChanged" id="sXt-ZA-vW3"/>

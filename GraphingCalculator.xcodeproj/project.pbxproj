@@ -62,9 +62,9 @@
 			children = (
 				F6627E971DCE634400168CD6 /* Main.storyboard */,
 				F6627EA51DCE651900168CD6 /* GraphingCalculatorVC.swift */,
+				F6627EA81DCE65F800168CD6 /* GraphView.swift */,
 				F61A36B61DCEC65800F3434C /* Calculator.swift */,
 				F61A36BA1DCED01D00F3434C /* Point.swift */,
-				F6627EA81DCE65F800168CD6 /* GraphView.swift */,
 				F6627EA71DCE653000168CD6 /* Supporting FIles */,
 			);
 			path = GraphingCalculator;

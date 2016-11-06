@@ -9,27 +9,38 @@
 import UIKit
 
 class GraphView: UIView {
+    
+    let calculator = Calculator()
     private var scale: CGFloat = 0.0
-//    private var xMin: Double = 0.0
-//    private var step: Double = 0.0
-    var xMax: Double = 0.0 {
+    
+    var equation: String = "" {
         didSet {
-//            xMin = -xMax
-//            step = xMax / 100
-            scale = bounds.width / CGFloat(xMax)
-            setNeedsDisplay()
+            line = calculator.plot(equation: equation)
         }
     }
-
-    var line: [Point] = [] {
+    
+    private var line: [Point] = [] {
         didSet {
             setNeedsDisplay()
         }
     }
     
+    var xMax: Double = 0.0 {
+        didSet {
+            scale = bounds.width / 2 / CGFloat(xMax)
+            calculator.xMax = xMax
+            line = calculator.plot(equation: equation)
+            setNeedsDisplay()
+        }
+    }
+    
+    func drawEquation(equation: String) {
+        self.equation = equation
+    }
+    
     override func draw(_ rect: CGRect) {
         drawAxes()
-        guard line.count > 0 else {
+        guard line.count > 0 && equation != "" else {
             return
         }
         let path = UIBezierPath()
@@ -41,7 +52,6 @@ class GraphView: UIView {
         
         for point in line {
             endingPoint = point.makeCGPointFor(view: self, scale: scale)
-            
             path.move(to: startingPoint)
             path.addLine(to: endingPoint)
             startingPoint = endingPoint
@@ -50,7 +60,7 @@ class GraphView: UIView {
         path.stroke()
     }
     
-    private func drawAxes() {
+    private func drawAxes() {        
         let path = UIBezierPath()
         let arrowSize:CGFloat = 10
         // x-axis
@@ -79,6 +89,7 @@ extension Point {
         let center = view.center
         let x = center.x + CGFloat(self.x) * scale
         let y = center.y - CGFloat(self.y) * scale
-        return CGPoint(x: x, y: y)
+        let point = CGPoint(x: x, y: y)
+        return point
     }
 }

@@ -10,11 +10,9 @@ import UIKit
 
 class GraphingCalculatorVC: UIViewController {
 
-    let calculator = Calculator()
     var range:Float! {
         didSet {
-            calculator.xMax = Double(range * 100)
-            graphView.xMax = Double(range * 100)
+            graphView.xMax = pow(10, Double(range))
         }
     }
     
@@ -31,26 +29,20 @@ class GraphingCalculatorVC: UIViewController {
     }
     
     @IBAction func digitPressed(_ sender: UIButton) {
-        
         displayLabel.text = "\(displayLabel.text!)\(sender.titleLabel!.text!)"
-        
     }
     
     @IBAction func operationPressed(_ sender: UIButton) {
-        
         displayLabel.text = "\(displayLabel.text!)\(sender.titleLabel!.text!)"
-        
     }
     
     @IBAction func clearPressed(_ sender: UIButton) {
         displayLabel.text = ""
-        graphView.line = []
+        graphView.drawEquation(equation: displayLabel.text!)
     }
     
     @IBAction func drawEquation(_ sender: UIButton) {
-        let line = calculator.plot(equation: "x^2")
-        graphView.line = line;
-        
+        graphView.drawEquation(equation: displayLabel.text!)
     }
     
     

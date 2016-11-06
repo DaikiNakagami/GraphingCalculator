@@ -16,7 +16,7 @@ class Calculator {
     var xMax: Double {
         didSet {
             xMin = -xMax
-            step = xMax / 100
+            step = (xMax - xMin) / 100
         }
     }
     
@@ -27,7 +27,7 @@ class Calculator {
     }
     
     func plot(equation: String) -> [Point] {
-        guard xMax != 0 else {
+        guard xMax != 0 && equation != "" else {
             return []
         }
         var line: [Point] = []
@@ -40,10 +40,9 @@ class Calculator {
     
     private func plot(equation: String, x: Double) -> Point {
         
-//        let y = pow(x, 2)
+        let y = pow(x, 2)
 //        let y = x
-        let y = sin(x)
-        
+//        let y = sin(x)
         return Point(_x: x, _y: y)
         
     }
