@@ -17,6 +17,7 @@ class GraphView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
+        drawAxes()
         guard line.count > 0 else {
             return
         }
@@ -37,6 +38,27 @@ class GraphView: UIView {
         path.stroke()
     }
     
+    private func drawAxes() {
+        let path = UIBezierPath()
+        let arrowSize:CGFloat = 10
+        // x-axis
+        path.move(to: CGPoint(x: 0, y: center.y))
+        path.addLine(to: CGPoint(x: bounds.width, y: center.y))
+        // arrow right
+        path.addLine(to: CGPoint(x: bounds.width - arrowSize, y: center.y - arrowSize))
+        path.move(to: CGPoint(x: bounds.width, y: center.y))
+        path.addLine(to: CGPoint(x: bounds.width - arrowSize, y: center.y + arrowSize))
+
+        // y-axis
+        path.move(to: CGPoint(x: center.x, y: bounds.height))
+        path.addLine(to: CGPoint(x: center.x, y: 0))
+        // arrow up
+        path.addLine(to: CGPoint(x: center.x + arrowSize, y: 0 + arrowSize))
+        path.move(to: CGPoint(x: center.x, y: 0))
+        path.addLine(to: CGPoint(x: center.x - arrowSize, y: 0 + arrowSize))
+        
+        path.stroke()
+    }
 
 }
 
