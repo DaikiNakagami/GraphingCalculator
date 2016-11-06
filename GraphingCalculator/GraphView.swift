@@ -9,7 +9,18 @@
 import UIKit
 
 class GraphView: UIView {
-    
+    private var scale: CGFloat = 0.0
+//    private var xMin: Double = 0.0
+//    private var step: Double = 0.0
+    var xMax: Double = 0.0 {
+        didSet {
+//            xMin = -xMax
+//            step = xMax / 100
+            scale = bounds.width / CGFloat(xMax)
+            setNeedsDisplay()
+        }
+    }
+
     var line: [Point] = [] {
         didSet {
             setNeedsDisplay()
@@ -23,12 +34,13 @@ class GraphView: UIView {
         }
         let path = UIBezierPath()
         path.lineWidth = 5
+        path.lineCapStyle = .round
         
-        var startingPoint = line.first!.makeCGPointFor(view: self)
+        var startingPoint = line.first!.makeCGPointFor(view: self, scale: scale)
         var endingPoint: CGPoint!
         
         for point in line {
-            endingPoint = point.makeCGPointFor(view: self)
+            endingPoint = point.makeCGPointFor(view: self, scale: scale)
             
             path.move(to: startingPoint)
             path.addLine(to: endingPoint)
@@ -63,10 +75,10 @@ class GraphView: UIView {
 }
 
 extension Point {
-    func makeCGPointFor(view: UIView) -> CGPoint {
+    func makeCGPointFor(view: UIView, scale: CGFloat) -> CGPoint {
         let center = view.center
-        let x = center.x + CGFloat(self.x)
-        let y = center.y - CGFloat(self.y)
+        let x = center.x + CGFloat(self.x) * scale
+        let y = center.y - CGFloat(self.y) * scale
         return CGPoint(x: x, y: y)
     }
 }

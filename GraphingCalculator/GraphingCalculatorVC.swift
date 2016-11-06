@@ -10,13 +10,24 @@ import UIKit
 
 class GraphingCalculatorVC: UIViewController {
 
+    let calculator = Calculator()
+    var range:Float! {
+        didSet {
+            calculator.xMax = Double(range * 100)
+            graphView.xMax = Double(range * 100)
+        }
+    }
+    
     @IBOutlet weak var graphView: GraphView!
     @IBOutlet weak var displayLabel: UILabel!
-    
-    let calculator = Calculator()
+    @IBOutlet weak var rangeSlider: UISlider!
+    @IBAction func rangeValueChanged(_ sender: UISlider) {
+        range = sender.value
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        range = rangeSlider.value
     }
     
     @IBAction func digitPressed(_ sender: UIButton) {
@@ -33,10 +44,11 @@ class GraphingCalculatorVC: UIViewController {
     
     @IBAction func clearPressed(_ sender: UIButton) {
         displayLabel.text = ""
+        graphView.line = []
     }
     
     @IBAction func drawEquation(_ sender: UIButton) {
-        let line = calculator.plot(equation: "x^2", from: -300, to: 300, by: 0.5)
+        let line = calculator.plot(equation: "x^2")
         graphView.line = line;
         
     }

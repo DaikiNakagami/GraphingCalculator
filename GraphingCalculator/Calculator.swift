@@ -11,7 +11,25 @@ import Foundation
 
 class Calculator {
     
-    func plot(equation: String, from xMin: Double, to xMax: Double, by step: Double) -> [Point] {
+    private var xMin: Double
+    private var step: Double
+    var xMax: Double {
+        didSet {
+            xMin = -xMax
+            step = xMax / 100
+        }
+    }
+    
+    init() {
+        xMin = 0.0
+        xMax = 0.0
+        step = 0.0
+    }
+    
+    func plot(equation: String) -> [Point] {
+        guard xMax != 0 else {
+            return []
+        }
         var line: [Point] = []
         for x in stride(from: xMin, to: xMax, by: step).dropFirst() {
             let point = plot(equation: equation, x: x)
@@ -24,7 +42,7 @@ class Calculator {
         
 //        let y = pow(x, 2)
 //        let y = x
-        let y = 100 * sin(x/20)
+        let y = sin(x)
         
         return Point(_x: x, _y: y)
         
