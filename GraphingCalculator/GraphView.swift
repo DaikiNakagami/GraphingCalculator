@@ -64,9 +64,7 @@ class GraphView: UIView {
 
 extension Point {
     func makeCGPointFor(view: UIView) -> CGPoint {
-//        let bounds = view.bounds
         let center = view.center
-//        let ratio = bounds.height / bounds.width
         let x = center.x + CGFloat(self.x)
         let y = center.y - CGFloat(self.y)
         return CGPoint(x: x, y: y)
