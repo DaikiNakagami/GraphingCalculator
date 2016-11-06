@@ -36,8 +36,7 @@ class GraphingCalculatorVC: UIViewController {
     }
     
     @IBAction func drawEquation(_ sender: UIButton) {
-        let line = calculator.plot(equation: "x^2", from: -10, to: 10, by: 0.5)
-        
+        let line = calculator.plot(equation: "x^2", from: -300, to: 300, by: 0.5)
         graphView.line = line;
         
     }

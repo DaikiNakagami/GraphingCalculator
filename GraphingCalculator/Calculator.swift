@@ -22,7 +22,9 @@ class Calculator {
     
     private func plot(equation: String, x: Double) -> Point {
         
-        let y = pow(x, 2)
+//        let y = pow(x, 2)
+//        let y = x
+        let y = 100 * sin(x/20)
         
         return Point(_x: x, _y: y)
         
