@@ -75,11 +75,17 @@
                                                         <rect key="frame" x="251" y="0.0" width="115.5" height="222"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="C"/>
+                                                        <connections>
+                                                            <action selector="clearPressed:" destination="bs3-Qr-bbx" eventType="touchUpInside" id="5Wa-t3-WVh"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWk-BG-z4r">
                                                         <rect key="frame" x="376.5" y="0.0" width="115.5" height="222"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="Go"/>
+                                                        <connections>
+                                                            <action selector="drawEquation:" destination="bs3-Qr-bbx" eventType="touchUpInside" id="cLi-pU-EMZ"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -114,6 +120,9 @@
                                                         <rect key="frame" x="376.5" y="0.0" width="115.5" height="221.5"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="+"/>
+                                                        <connections>
+                                                            <action selector="operationPressed:" destination="bs3-Qr-bbx" eventType="touchUpInside" id="yQi-OO-cI5"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -148,6 +157,9 @@
                                                         <rect key="frame" x="376.5" y="0.0" width="115.5" height="221.5"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="−"/>
+                                                        <connections>
+                                                            <action selector="operationPressed:" destination="bs3-Qr-bbx" eventType="touchUpInside" id="5RC-UD-KL5"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -182,6 +194,9 @@
                                                         <rect key="frame" x="376.5" y="0.0" width="115.5" height="222"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="×"/>
+                                                        <connections>
+                                                            <action selector="operationPressed:" destination="bs3-Qr-bbx" eventType="touchUpInside" id="5ho-jr-nvF"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -216,6 +231,9 @@
                                                         <rect key="frame" x="376.5" y="0.0" width="115.5" height="221.5"/>
                                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                         <state key="normal" title="÷"/>
+                                                        <connections>
+                                                            <action selector="operationPressed:" destination="bs3-Qr-bbx" eventType="touchUpInside" id="bmH-wA-e3u"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -238,11 +256,12 @@
                     </view>
                     <connections>
                         <outlet property="displayLabel" destination="ah9-Lh-Ivi" id="JkR-8s-qMc"/>
+                        <outlet property="graphView" destination="3xg-DG-T7y" id="LOb-w0-RmU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxb-tN-7AT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-980" y="-584"/>
+            <point key="canvasLocation" x="-875" y="-585"/>
         </scene>
     </scenes>
 </document>

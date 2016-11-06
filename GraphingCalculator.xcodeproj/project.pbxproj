@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F61A36B71DCEC65900F3434C /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61A36B61DCEC65800F3434C /* Calculator.swift */; };
+		F61A36BB1DCED01D00F3434C /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61A36BA1DCED01D00F3434C /* Point.swift */; };
 		F6627E941DCE634400168CD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6627E931DCE634400168CD6 /* AppDelegate.swift */; };
 		F6627E991DCE634400168CD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6627E971DCE634400168CD6 /* Main.storyboard */; };
 		F6627E9B1DCE634400168CD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6627E9A1DCE634400168CD6 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F61A36B61DCEC65800F3434C /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		F61A36BA1DCED01D00F3434C /* Point.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Point.swift; sourceTree = "<group>"; };
 		F6627E901DCE634400168CD6 /* GraphingCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GraphingCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6627E931DCE634400168CD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6627E981DCE634400168CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,8 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				F6627E971DCE634400168CD6 /* Main.storyboard */,
-				F6627EA81DCE65F800168CD6 /* GraphView.swift */,
 				F6627EA51DCE651900168CD6 /* GraphingCalculatorVC.swift */,
+				F61A36B61DCEC65800F3434C /* Calculator.swift */,
+				F61A36BA1DCED01D00F3434C /* Point.swift */,
+				F6627EA81DCE65F800168CD6 /* GraphView.swift */,
 				F6627EA71DCE653000168CD6 /* Supporting FIles */,
 			);
 			path = GraphingCalculator;
@@ -149,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F6627EA61DCE651900168CD6 /* GraphingCalculatorVC.swift in Sources */,
+				F61A36BB1DCED01D00F3434C /* Point.swift in Sources */,
+				F61A36B71DCEC65900F3434C /* Calculator.swift in Sources */,
 				F6627E941DCE634400168CD6 /* AppDelegate.swift in Sources */,
 				F6627EA91DCE65F800168CD6 /* GraphView.swift in Sources */,
 			);
@@ -314,6 +322,7 @@
 				F6627EA41DCE634400168CD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
